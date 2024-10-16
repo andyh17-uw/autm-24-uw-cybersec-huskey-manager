@@ -141,10 +141,15 @@ Below is an example of the encrypted network traffic you should now be able to s
 
 ![Encrypted Traffic](/lab-writeup-imgs/encrypted_traffic.png)
 
-While we can see our web application performing the key exchange with our browser, we cannot view the raw HTTP traffic anymore!
+While we can see our web application performing the key exchange with our browser, we cannot view the raw HTTP traffic anymore! Your packets' descriptions may vary but these are all part of the TLS Handshake.
 
 ## Part 2a: Testing our cryptography: (if you were NOT successful with mitm last week) 
 
 Instead of redoing our MiTM attack to see that the intercepted traffic is now encrypted, you can view that the traffic is encrypted on your own device. 
 
 Open Wireshark and start capturing traffic. Host your password manager and connect to [https://localhost:443](https://localhost:443). Find traffic from the password manager, which is now using the TLSv1.3 protocol instead of HTTP. The Description of the packet may very depending but you should see terms like these that are part of the TLS Handshake.
+
+You can do 'nslookup cybersec.ischool.uw.edu' to check the IP to help with packet filtering. 
+
+!wiresharkPubHostTraffic.png
+!wiresharkPubHostTrafficMoreInfo.png
