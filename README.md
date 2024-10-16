@@ -151,5 +151,5 @@ Open Wireshark and start capturing traffic. Host your password manager and conne
 
 You can do 'nslookup cybersec.ischool.uw.edu' to check the IP to help with packet filtering. 
 
-![TLS Handshake Messages]wiresharkPubHostTraffic.png
-![TLS Handshake Description]wiresharkPubHostTrafficMoreInfo.png
+![TLS Handshake Messages](wiresharkPubHostTraffic.png)
+![TLS Handshake Description](wiresharkPubHostTrafficMoreInfo.png)
