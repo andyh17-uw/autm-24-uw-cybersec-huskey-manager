@@ -143,7 +143,7 @@ Below is an example of the encrypted network traffic you should now be able to s
 
 While we can see our web application performing the key exchange with our browser, we cannot view the raw HTTP traffic anymore! Your packets' descriptions may vary but these are all part of the TLS Handshake.
 
-## Part 2a: Testing our cryptography: (if you were NOT successful with mitm last week) 
+## Part 2b: Testing our cryptography: (if you were NOT successful with mitm last week) 
 
 Instead of redoing our MiTM attack to see that the intercepted traffic is now encrypted, you can view that the traffic is encrypted on your own device. 
 
