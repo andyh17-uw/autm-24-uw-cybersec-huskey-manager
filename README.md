@@ -93,7 +93,7 @@ Our certificate will contain our websites public key, which clients can use to e
 Now that we have our certificate, let's start configuring our nginx server to use HTTPS!
 
 1. First, we will need to tell nginx where our certificate and key are located:
-    - In `docker-compose.yaml` add the following lines under services > server > volumes:
+    - In `docker-compose.yaml` add the following lines under services > router > volumes:
         - `./certs/localhost.crt:/etc/nginx/ssl/localhost.crt`
         - `./certs/localhost.key:/etc/nginx/ssl/localhost.key`
     - This will map our cert/key file to the directory `/etc/nginx/ssl/` in our nginx container.
@@ -106,7 +106,7 @@ Now that we have our certificate, let's start configuring our nginx server to us
     - On line 2, we see that our server is listening on port 80, change this port to 443.
     - Nginx will default to HTTP regardless of the port we specify. In order to correct this, we need to add `ssl` after we specify the port. Line 2 of `nginx-default.conf` file should look like this:
         - `listen 443 ssl;`
-    - We also need to specify in this file where our certificate and key are located in our nginx container. After we specify our server_name, add the following lines:
+    - We also need to specify in this file where our certificate and key are located in our nginx container. After the line that specifies our server_name, add the following lines:
 
         - `ssl_certificate /etc/nginx/ssl/localhost.crt;`
         - `ssl_certificate_key /etc/nginx/ssl/localhost.key;`
@@ -129,7 +129,7 @@ Now that we have our certificate, let's start configuring our nginx server to us
     
     In part two we will be putting this to the test by performing our MiTM attack again!
 
-## Part 2: Testing our cryptography:
+## Part 2a: Testing our cryptography: (if you were successful with mitm last week) 
 
 Now that we have successfully utilized encryption, when performing MiTM attacks we should no longer be able to view the sensitive data of our victim.
 
@@ -143,3 +143,8 @@ Below is an example of the encrypted network traffic you should now be able to s
 
 While we can see our web application performing the key exchange with our browser, we cannot view the raw HTTP traffic anymore!
 
+## Part 2a: Testing our cryptography: (if you were NOT successful with mitm last week) 
+
+Instead of redoing our MiTM attack to see that the intercepted traffic is now encrypted, you can view that the traffic is encrypted on your own device. 
+
+Open Wireshark and start capturing traffic. Host your password manager and connect to [https://localhost:443](https://localhost:443). Find traffic from the password manager, which is now using the TLSv1.3 protocol instead of HTTP. The Description of the packet may very depending but you should see terms like these that are part of the TLS Handshake.
