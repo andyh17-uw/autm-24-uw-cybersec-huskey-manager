@@ -8,7 +8,7 @@ Loggly is a cloud-based log management and analytics service that can allow us t
 
 ![Loggly start free trial](/lab-writeup-imgs/loggly_start_trial.png)
 
-2. Fill out all the personal and account information. For organization you can just put iSchool, and for subdomain you can put anything (I used info310).
+2. Fill out all the personal and account information. For organization you can just put iSchool, and for subdomain you can put anything but it must be unique (I used info310).
 
 ![Create Loggly account](/lab-writeup-imgs/create_loggly_account.png)
 
