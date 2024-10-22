@@ -25,7 +25,7 @@ Loggly is a cloud-based log management and analytics service that can allow us t
 You need to copy the customer token shown on this page. This is what will tell our web application to send our logs to the correct Loggly account.
 
 ## Part 2: Adding Loggly to our web app.
-Now that we have made our Loggly account and retrieved our customer token, we can add it to our web application! Create a new file under webapp < public < components, called `loggly-logger.php`. Our developers have sent us the code for our  `loggly-logger.php` component:
+Now that we have made our Loggly account and retrieved our customer token, we can add it to our web application! Our developers have sent us the code for our  `loggly-logger.php` component:
 
 ```
 <?php
