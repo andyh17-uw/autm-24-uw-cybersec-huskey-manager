@@ -76,7 +76,7 @@ This PHP script uses the Monolog library to send our logs to Loggly:
     ```
     $logger->info('Loggly Sending Informational Message');
     ```
-Now that we understand how our logger component works, let's go ahead and get started using it!
+### Now that we understand how our logger component works, let's go ahead and get started using it!
 
 1. Copy and paste the code for our new loggly component into a php file called `loggly-logger.php`, make sure this file is located in `public > webapp > components > loggly-logger.php`.
 
