@@ -136,6 +136,8 @@ Now that we understand how our logger component works, let's go ahead and get st
 
 Now that we have successfully set up loggly, we need to decide what events we want to log. With your group, come up with at least 3 additional events in your password manager that should be logged in loggly, and add the appropriate code to generate logs in loggly. Remember to first 'include' the loggly components (and remember that the pathing to the loggly component is relative!) and add the `$logger` message to those events.
 
+You must log events from at least 2 different php scripts.
+
 Include screenshots in your lab writeup of the logs you generate (this is required to receive full credit for the assignment)!
 
 
